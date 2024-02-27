@@ -16,6 +16,9 @@
   }
 }
 
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
