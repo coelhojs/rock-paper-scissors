@@ -1,4 +1,4 @@
-import { Card, Flex, Grid, IconButton } from "@radix-ui/themes";
+import { Button, Card, Flex, Grid, IconButton } from "@radix-ui/themes";
 import PaperIcon from "../../images/icon-paper.svg";
 import RockIcon from "../../images/icon-rock.svg";
 import ScissorsIcon from "../../images/icon-scissors.svg";
@@ -6,9 +6,9 @@ import ScissorsIcon from "../../images/icon-scissors.svg";
 import Image from "next/image";
 export default function Home() {
   return (
-    <Grid className="home" height="100vh" align="center" justify="center">
+    <Flex className="home" height="100vh" justify="between" direction="column" >
       <header>
-        <Flex align="center" justify="center">
+        <Flex align="center" justify="center" className="mt-8">
           <Card className="header">
             <Flex align="center" justify="between">
               <div className="title">
@@ -40,14 +40,20 @@ export default function Home() {
         </Flex>
       </main>
       <footer>
-        <div className="rules">
-          <button>Rules</button>
-        </div>
-        <div className="attribution">
-          Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-          Coded by <a href="#">Your Name Here</a>.
-        </div>
+        <Flex align="center" justify="end" direction="column">
+          <div className="rules ml-auto mr-8 mb-4">
+            <Button
+              className="px-6"
+              style={{ backgroundColor: 'transparent', border: '1px solid inherit', textTransform: 'uppercase' }}>
+              Rules
+            </Button>
+          </div>
+          <div className="attribution mt-auto">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+            Coded by <a href="#">Your Name Here</a>.
+          </div>
+        </Flex>
       </footer>
-    </Grid >
+    </Flex >
   );
 }

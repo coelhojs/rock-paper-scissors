@@ -19,11 +19,13 @@
 .attribution {
   font-size: 11px;
   text-align: center;
+  background-color: lightgray;
+  width: 100%;
+  a {
+    color: hsl(228, 45%, 44%);
+  }
 }
 
-.attribution a {
-  color: hsl(228, 45%, 44%);
-}
 
 .home {
   background: rgb(9, 9, 121);
